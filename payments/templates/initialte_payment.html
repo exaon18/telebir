@@ -1,0 +1,6 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="amount">Amount:</label>
+    <input type="text" id="amount" name="amount" required>
+    <button type="submit">Pay with Telebirr</button>
+</form>
