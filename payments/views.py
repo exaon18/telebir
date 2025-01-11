@@ -22,7 +22,7 @@ def initiate_payment(request):
         if response.status_code == 200:
             Payment.objects.create(transaction_id=transaction_id, amount=amount, status='Pending')
             return redirect(response.json()['paymentUrl'])
-    return render(request, 'payments/initiate_payment.html')
+    return render(request, 'initiate_payment.html')
 from django.http import JsonResponse
 from .models import Payment
 
